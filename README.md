@@ -1,37 +1,31 @@
-# WatchTime Pro — YouTube Growth Planner
+# WatchTime Pro 2.0
 
-A responsive, static website for planning authentic YouTube channel growth.
+A responsive, browser-only YouTube growth planning website.
 
-## Run locally
-1. Extract the ZIP file.
-2. Open `index.html` in a modern browser.
-3. No build step, server, database, API key, or account is required.
+## Files
+- `index.html` — app structure
+- `styles.css` — responsive layout and design
+- `app.js` — planner, daily logs, video tracker, SEO ideas, backup/restore
 
-For local development you can also run:
-```bash
-python -m http.server 8000
-```
-Then open `http://localhost:8000`.
+## Publish on GitHub Pages
+Replace the existing repository files `index.html`, `styles.css`, and `app.js` with the matching files from this folder. Keep the existing `.github/workflows` folder. Commit the changes. GitHub Pages will redeploy automatically.
 
 ## Features
-- Dashboard for watch-hour and subscriber goals
-- Calculator using remaining hours, average view duration, and expected daily views
+- Dashboard for eligible public watch-hour and subscriber targets
+- Watch-time calculator based on average view duration and estimated daily long-form views
+- Daily Studio reading log with changes between dates
 - Video tracker with estimated hours per upload
-- Basic title, description, and keyword idea generator
-- Browser-local persistence using `localStorage`
-- JSON backup export
+- SEO title, description and keyword starter generator
+- Local browser storage, JSON export and import
 - Responsive mobile and desktop layout
 
 ## Important limitations
-- This is a planning tool, not a watch-time generator.
-- It does not play videos, create views, automate engagement, or connect to YouTube.
-- Video tracker hours are estimates (`views × average view duration ÷ 60`), not official eligible public watch hours.
-- Use the eligible public watch-hour figure shown in YouTube Studio > Earn for your actual progress.
-- The app stores data only in the current browser on the current device. Clearing browser data may erase it; use Export Data for a backup.
-- No Google password should ever be entered into this app.
+- This is a planning tool, not a watch-time generator. It does not create views, play videos, automate engagement, or manipulate YouTube metrics.
+- Video hours are estimates (`views × average view duration ÷ 60`), not official eligible public watch hours.
+- Use YouTube Studio > Earn for the actual eligible public watch-hour total.
+- Data is saved in the current browser on the current device. Export backups regularly.
+- Never enter a Google password into this app.
+- This version does not connect to YouTube. A future official integration requires Google OAuth consent and YouTube Analytics API authorization.
 
-## Monetization note
-YouTube's eligibility requirements and definitions can change. Check the current YouTube Studio Earn page and official YouTube Help documentation for your channel's region and account. Public Shorts-feed watch time does not count toward the 4,000 public watch-hour route.
-
-Official reference:
-https://support.google.com/youtube/answer/72851
+## Run locally
+Open `index.html` in a modern browser.
