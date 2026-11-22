@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Plan your YouTube channel's real audience growth with WatchTime Pro.">
+  <title>WatchTime Pro — YouTube Growth Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">W</span><span>WatchTime <b>Pro</b><small>CREATOR WORKSPACE</small></span></a>
+      <nav id="nav">
+        <button class="nav-item active" data-page="dashboard">▦ <span>Dashboard</span></button>
+        <button class="nav-item" data-page="planner">◷ <span>Growth planner</span></button>
+        <button class="nav-item" data-page="videos">▤ <span>Video tracker</span></button>
+        <button class="nav-item" data-page="seo">✦ <span>SEO ideas</span></button>
+        <button class="nav-item" data-page="settings">⚙ <span>Settings</span></button>
+      </nav>
+      <div class="sidebar-note"><span class="dot"></span> Your data stays in this browser</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">YOUTUBE CREATOR TOOLKIT</p><h1 id="page-title">Dashboard</h1></div>
+        <div class="top-actions"><span class="local-pill">● Local workspace</span><button class="icon-btn" id="exportBtn" title="Export data">⇩</button></div>
+      </header>
+
+      <section class="page active" id="page-dashboard">
+        <div class="welcome panel">
+          <div><p class="eyebrow light">YOUR NEXT MILESTONE</p><h2>Build a channel people<br> <em>want to keep watching.</em></h2><p>Turn your current numbers into a practical publishing plan.</p><button class="primary" data-go="planner">Create my growth plan <span>→</span></button></div>
+          <div class="welcome-art"><div class="ring ring-one"></div><div class="ring ring-two"></div><div class="play">▶</div><div class="art-label">CONSISTENCY<br><b>× QUALITY</b></div></div>
+        </div>
+
+        <div class="section-heading"><div><p class="eyebrow">CHANNEL SNAPSHOT</p><h2>Your progress</h2></div><span class="muted">Edit figures in Settings</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon purple">◷</span><p>Watch hours so far</p><strong id="stat-hours">0</strong><small id="stat-hours-sub">of 4,000 goal</small></article>
+          <article class="stat-card"><span class="stat-icon blue">◉</span><p>Subscribers</p><strong id="stat-subs">0</strong><small id="stat-subs-sub">of 1,000 goal</small></article>
+          <article class="stat-card"><span class="stat-icon green">↗</span><p>Hours remaining</p><strong id="stat-left">4,000</strong><small>To your watch-hour goal</small></article>
+          <article class="stat-card"><span class="stat-icon orange">▣</span><p>Tracked videos</p><strong id="stat-videos">0</strong><small>In your video tracker</small></article>
+        </div>
+        <div class="content-grid">
+          <article class="card progress-card"><div class="card-head"><div><p class="eyebrow">WATCH-TIME TARGET</p><h3>Progress to 4,000 hours</h3></div><span class="percent" id="progress-percent">0%</span></div><div class="progress-track"><div id="progress-fill"></div></div><div class="progress-labels"><b id="progress-current">0 hours</b><span>4,000 hours</span></div><p class="tip">Use eligible public long-form watch hours from YouTube Studio for the closest estimate.</p></article>
+          <article class="card mini-card"><p class="eyebrow">QUICK ESTIMATE</p><h3>How many views do you need?</h3><div class="estimate-row"><label>Average view duration</label><b id="quick-avd">4 min</b></div><div class="estimate-row"><label>Views to gain 100 hours</label><b id="quick-views">1,500</b></div><button class="text-btn" data-go="planner">Open calculator →</button></article>
+        </div>
+        <article class="card"><div class="card-head"><div><p class="eyebrow">NEXT ACTIONS</p><h3>Small steps, steady progress</h3></div></div><div class="action-list"><div><span class="action-number">01</span><p><b>Set your real baseline</b><small>Copy watch hours and subscribers from YouTube Studio.</small></p><button class="outline" data-go="settings">Update figures</button></div><div><span class="action-number">02</span><p><b>Plan a consistent schedule</b><small>Choose a sustainable upload rhythm and topic.</small></p><button class="outline" data-go="planner">Build plan</button></div><div><span class="action-number">03</span><p><b>Review what viewers enjoy</b><small>Track each upload and learn from retention.</small></p><button class="outline" data-go="videos">Track videos</button></div></div></article>
+      </section>
+
+      <section class="page" id="page-planner">
+        <div class="page-intro"><p class="eyebrow">PLAN WITH REALISTIC ASSUMPTIONS</p><h2>Watch-time growth calculator</h2><p>Estimate the views and pace needed based on average viewing time. This is a planning estimate, not a promise of results.</p></div>
+        <div class="content-grid planner-grid">
+          <article class="card form-card"><h3>Your current numbers</h3>
+            <label>Current eligible public watch hours <input id="p-hours" type="number" min="0" value="0"></label>
+            <label>Watch-hour goal <input id="p-goal" type="number" min="1" value="4000"></label>
+            <label>Average view duration (minutes) <input id="p-avd" type="number" min="0.1" step="0.1" value="4"></label>
+            <label>Expected views per day <input id="p-daily" type="number" min="0" value="300"></label>
+            <label>Current subscribers <input id="p-subs" type="number" min="0" value="0"></label>
+            <label>Subscriber goal <input id="p-subgoal" type="number" min="1" value="1000"></label>
+            <button class="primary full" id="calculateBtn">Calculate my plan →</button>
+          </article>
+          <article class="card results-card"><p class="eyebrow">YOUR ESTIMATE</p><h3>What the numbers suggest</h3><div class="result-highlight"><strong id="r-views">60,000</strong><span>estimated additional views to reach the watch-hour goal</span></div><div class="result-lines"><div><span>Hours remaining</span><b id="r-left">4,000</b></div><div><span>Estimated hours per day</span><b id="r-perday">20</b></div><div><span>Estimated days to goal</span><b id="r-days">200</b></div><div><span>Views per day needed</span><b id="r-needed">300</b></div><div><span>Subscriber gap</span><b id="r-subs">1,000</b></div></div><p class="tip">Actual eligible hours can differ due to viewer behaviour, video privacy, content type, and YouTube reporting.</p></article>
+        </div>
+        <article class="card"><p class="eyebrow">SIMPLE WEEKLY ROUTINE</p><h3>A repeatable creator workflow</h3><div class="week-grid"><div><b>MON</b><span>Research topics</span></div><div><b>TUE</b><span>Write & record</span></div><div><b>WED</b><span>Edit video</span></div><div><b>THU</b><span>Publish & share</span></div><div><b>FRI</b><span>Review retention</span></div><div><b>SAT</b><span>Community post</span></div><div><b>SUN</b><span>Rest & plan</span></div></div></article>
+      </section>
+
+      <section class="page" id="page-videos">
+        <div class="section-heading"><div><p class="eyebrow">CONTENT PERFORMANCE</p><h2>Video tracker</h2><p class="muted">Record figures from YouTube Studio to compare your uploads.</p></div><button class="primary" id="addVideoBtn">＋ Add video</button></div>
+        <article class="card table-card"><div class="table-wrap"><table><thead><tr><th>Video title</th><th>Views</th><th>Avg. view (min)</th><th>Estimated hours</th><th>Format</th><th></th></tr></thead><tbody id="videoRows"><tr><td colspan="6" class="empty">No videos yet. Add your first upload to start tracking.</td></tr></tbody></table></div></article>
+        <p class="tip">Estimated hours = views × average view duration ÷ 60. This estimate is not the official eligible public watch-hour total.</p>
+      </section>
+
+      <section class="page" id="page-seo">
+        <div class="page-intro"><p class="eyebrow">HELP VIEWERS FIND YOUR VIDEOS</p><h2>SEO idea workspace</h2><p>Use these prompts to create clear, accurate metadata. Avoid misleading titles or unrelated tags.</p></div>
+        <article class="card form-card seo-card"><label>Video topic <input id="seo-topic" placeholder="e.g. Beginner guide to video editing"></label><label>Audience / language <input id="seo-audience" placeholder="e.g. Hindi-speaking beginners"></label><label>Video format <select id="seo-format"><option>Educational tutorial</option><option>Story / documentary</option><option>Devotional music</option><option>Gaming</option><option>Review</option><option>Entertainment</option></select></label><button class="primary" id="seoBtn">Generate SEO ideas ✦</button><div id="seoOutput" class="seo-output hidden"></div></article>
+      </section>
+
+      <section class="page" id="page-settings">
+        <div class="page-intro"><p class="eyebrow">PERSONALISE YOUR WORKSPACE</p><h2>Channel settings</h2><p>Enter the latest figures shown in YouTube Studio. These values are saved only in this browser.</p></div>
+        <article class="card form-card settings-form"><label>Channel name <input id="s-name" placeholder="Your channel name"></label><label>Eligible public watch hours <input id="s-hours" type="number" min="0" value="0"></label><label>Subscribers <input id="s-subs" type="number" min="0" value="0"></label><label>Watch-hour target <input id="s-goal" type="number" min="1" value="4000"></label><label>Subscriber target <input id="s-subgoal" type="number" min="1" value="1000"></label><button class="primary" id="saveSettings">Save channel figures</button><button class="danger-btn" id="resetBtn">Reset all local data</button><p class="tip">This planner does not connect to or modify your YouTube account. Never enter your Google password here.</p></article>
+      </section>
+
+      <footer>WATCHTIME PRO <span>Independent planning tool · Not affiliated with YouTube or Google</span></footer>
+    </main>
+  </div>
+  <dialog id="videoDialog"><form method="dialog" id="videoForm" class="dialog-form"><div class="dialog-head"><h3>Add a video</h3><button class="icon-btn" value="cancel" aria-label="Close">×</button></div><label>Video title<input id="v-title" required maxlength="100" placeholder="Enter your video title"></label><label>Views<input id="v-views" type="number" min="0" required value="0"></label><label>Average view duration (minutes)<input id="v-avd" type="number" min="0" step="0.1" required value="3"></label><label>Format<select id="v-format"><option>Long-form</option><option>Short</option><option>Livestream</option></select></label><div class="dialog-actions"><button class="outline" value="cancel">Cancel</button><button class="primary" id="saveVideo" value="default">Save video</button></div></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
